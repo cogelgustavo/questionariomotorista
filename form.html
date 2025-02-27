@@ -14,7 +14,7 @@
 	box-sizing: border-box;
 }
 body{
-display: flex;
+    display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -28,16 +28,14 @@ header.cabeca{
 	box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.20);
 	box-shadow: -1px -1px -1px;
 	border-left: 0.1px solid #00000010;
-	min-width: 30vw;
-	max-width: 50vw;
-	width: 50vw;
+	width: 50%
 	min-height: 270px;
 	max-height: 400px;
 	height: 40vh;
 	margin-bottom: 20px;
 	border-radius: 10px;
 	border-top: 13px solid rgb(128, 128, 128);
-		
+	margin-top: 5px;
 
 }
 h1, h3, p,  a{
@@ -153,31 +151,42 @@ p#op{
 	margin-left: 20px;
 }
 
-@media only screen and(max-width: 800px){
+@media (max-width: 600px){
+	*{
+	padding: 0;
+	box-sizing: border-box;
+	margin:0;
+	}
 	body{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 800px;
-	height: 100vh;
+	
+	
 	}
 	.cabeca{
-		width: 600px;
-		min-width: 50%;
-		font-size: 0.5rem;
-		word-wrap: break-word;
-		min-height: 270px;
-		max-height: 500px;
+		background-color: gray;
+		width: 90vw;
+		margin: 0;
+	}
+	form{
+		width: 90vw;
+	}
+
 		
-	}		
 	.perguntas{
 		max-width: 100%;
 		min-width: 50%;
 		
 	}
 	p#op{
-		font-size-adjust: inherit;
+		
+		width: 40%;
+		
+	}
+	#subhead{
+		width: 90vw;
 	}
 }
 
@@ -210,8 +219,6 @@ forward_to_inbox
 	
 	
 </section>
-	
-	
 	
 </header>
 <section class="perguntas">
