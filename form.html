@@ -153,9 +153,18 @@ p#op{
 	margin-left: 20px;
 }
 
-@media screen and(max-width: 700px){
-	header.cabeca{
-		min-width: 100%;
+@media only screen and(max-width: 800px){
+	body{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 800px;
+	height: 100vh;
+	}
+	.cabeca{
+		width: 600px;
+		min-width: 50%;
 		font-size: 0.5rem;
 		word-wrap: break-word;
 		min-height: 270px;
