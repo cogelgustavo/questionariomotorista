@@ -162,6 +162,70 @@ form{
 	width: 100%;
 			
 	}
+#cardlibdiv{
+	display: none;
+	
+	height: 50vh;
+	border: none;
+	top: 50%;
+	left: 50%;
+	transform: calc(-50%, -50%);
+	overflow: hiden;
+
+}
+#cardnegdiv{
+	display: none;
+	
+	height: 50vh;
+	border: none;
+	top: 50%;
+	left: 50%;
+	transform: calc(-50%, -50%);
+	overflow: hiden;
+
+}
+
+
+.cardlib{
+	display: block;
+	height: 100vh;
+	width: 50vw;
+	top: 50%;
+	left: 50%;
+	transform: calc(50%, -50%);
+	overflow: hiden;
+	border: none;
+}
+iframe{
+	width: 50%;
+}
+a{
+	cursor: pointer;
+	border: 1px solid black;
+	text-align: center;
+	text-decoration: none;
+	padding: 2px 3px;
+	margin-left: 20px;
+	border-radius: 3px;
+	background-color: gray;
+	color: white;
+	transition:0.3s;
+}
+a:hover{
+	background-color: lightgray;
+	color: black;
+	box-shadow: 2px 2px 2px lightgray;
+}
+#nome{
+	text-align: center;
+	border: 1px solid black;
+	background-color: gray;
+	color: white;
+	font-weight: bolder;
+	width: 50%;
+	margin: auto;
+	margin-top: 10px;
+}
 @media (max-width: 600px){
 	*{
 	padding: 0;
@@ -209,13 +273,15 @@ form{
 	
 		
 <section id="subhead">
+	
+	
 	<div>
-	<p><a href="#">Mudar de conta</a>
-	<span class="material-symbols-outlined rain">
+<span class="material-symbols-outlined rain">
 weather_mix
-</span></p>
+</span>
 	</div>
-	<div class="op"><p><span class="material-symbols-outlined inbox">
+	<div class="op">
+<p><span class="material-symbols-outlined inbox">
 forward_to_inbox
 </span> Não compartilhado </p>
 	
@@ -224,10 +290,20 @@ forward_to_inbox
 	
 	
 </section>
+<a href="https://cogelgustavo.github.io/questionariomotorista/formchecklist.html">Preencher novo formulario</a>
+	<p id="nome"></P>
 	
 </header>
 <section class="perguntas">
-<form>
+
+<div id="cardlibdiv">
+	<iframe class="cardlib" src="https://cogelgustavo.github.io/questionariomotorista/card.html"></iframe>
+</div>
+<div id="cardnegdiv">
+	<iframe class="cardlib" src="https://cogelgustavo.github.io/questionariomotorista/cardnegado.html"></iframe>
+</div>
+
+<form id="form">
 	
 
 
@@ -392,10 +468,16 @@ function verificarFormulario() {
 	const bemsim = document.getElementById("bemsim").checked;
 		
 		if (naoingeriu && droganao && horasnao && fadiganao && sononao && atvnao && pernao || persim && obrnao && bemsim){
-			window.location.href = "card.html"
-		
+			const funcionario = document.getElementById("nomemotorista").value;				
+			document.getElementById('form').style.display = "none"
+			document.getElementById('cardlibdiv').style.display = "block"
+			document.getElementById('nome').innerHTML = funcionario
+			
 		}else{
-			window.location.href = "cardnegado.html"
+			const funcionario = document.getElementById("nomemotorista").value;
+			document.getElementById('form').style.display = "none"
+			document.getElementById('cardnegdiv').style.display = "block"
+			document.getElementById('nome').innerHTML = funcionario
 			}	
 
 }
