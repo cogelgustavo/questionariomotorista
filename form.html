@@ -316,7 +316,7 @@ forward_to_inbox
 	<div class="pergunta">
 	<p>Irá dirigir por longos períodos (por mais de 3 horas consecutivas)?* </p>
 
-	<p>OBS: Empregados mapeados em RAC 2 quando operando veiculo por longos períodos devem fazer no mínimo pausa de 15 minutos a cada 3 horas, em local adequado</P>
+	<p>OBS: Colaboradores quando operando veículo por longos períodos devem fazer no mínimo pausa de 30 minutos a cada 4 horas, em local adequado</P>
 
 	<div id="label">
 	<div class="label">
@@ -378,10 +378,11 @@ function verificarFormulario() {
 	const sononao = document.getElementById("sononao").checked;
 	const atvnao = document.getElementById("atvnao").checked;
 	const pernao = document.getElementById("pernao").checked;
+	const persim = document.getElementById("persim").checked;
 	const obrnao = document.getElementById("obrnao").checked;
 	const bemsim = document.getElementById("bemsim").checked;
 		
-		if (naoingeriu && droganao && horasnao && fadiganao && sononao && atvnao && pernao && obrnao && bemsim){
+		if (naoingeriu && droganao && horasnao && fadiganao && sononao && atvnao && pernao || persim && obrnao && bemsim){
 			window.location.href = "card.html"
 		
 		}else{
