@@ -536,7 +536,7 @@ forward_to_inbox
 	</div>
 	</div>
 	</div>
-	<div class="pergunta">
+	<!--<div class="pergunta">
 	<p>Está com os treinamentos obrigatórios e exames médicos VENCIDOS?*</P>
 
 	<div id="label">
@@ -545,6 +545,7 @@ forward_to_inbox
 	<label for="obrsim">Sim</label>
 	<label for="obrnao">Não</label>
 	</div>
+	-->
 	<div class="input">
 	<input type="radio" name="exames" value="sim" id="obrsim" required/>
 	<input type="radio" name="exames" value="não" id="obrnao" required/>
@@ -586,7 +587,7 @@ function verificarFormulario() {
 	const atvnao = document.getElementById("atvnao").checked;
 	const pernao = document.getElementById("pernao").checked;
 	const persim = document.getElementById("persim").checked;
-	const obrnao = document.getElementById("obrnao").checked;
+	//const obrnao = document.getElementById("obrnao").checked;
 	const bemsim = document.getElementById("bemsim").checked;
 		
 		if (naoingeriu && droganao && horasnao && fadiganao && sononao && atvnao && pernao || persim && obrnao && bemsim){
@@ -617,7 +618,7 @@ function verificarFormulario() {
 		const sono = document.querySelector('input[name=sono]').checked;
 		const mental = document.querySelector('input[name=mental]').checked;
 		const longos = document.querySelector('input[name=longos]').checked;
-		const exames = document.querySelector('input[name=exames]').checked;
+		//const exames = document.querySelector('input[name=exames]').checked;
 		const sente = document.querySelector('input[name=sente]').checked;
 		const data = document.getElementById("data").value;
 
@@ -629,7 +630,7 @@ function verificarFormulario() {
 			'Accept': 'application/json',
 			'Content-Type': 'application/json',
 			},
-			body: JSON.stringify({ nome, ingerir, droga, trabalho, periodo, sono, mental, longos, exames, sente, data}),
+			body: JSON.stringify({ nome, ingerir, droga, trabalho, periodo, sono, mental, longos, /*exames, */sente, data}),
 	}).then(() => verificarFormulario())
 		
 
