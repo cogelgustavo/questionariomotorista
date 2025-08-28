@@ -621,15 +621,15 @@ function verificarFormulario() {
 		
 		
 		const nome = document.getElementById("nomemotorista").value;
-		const ingerir = document.querySelector('input[name="ingerir"]:checked');
-		const droga = document.querySelector('input[name="droga"]:checked');
-		const trabalho = document.querySelector('input[name="trabalho"]:checked');
-		const periodo = document.querySelector('input[name="periodo"]:checked');
-		const sono = document.querySelector('input[name="sono"]:checked');
-		const mental = document.querySelector('input[name="mental"]:checked');
-		const longos = document.querySelector('input[name="longos"]:checked');
+		const ingerir = document.querySelector('input[name="ingerir"]:checked').value;
+		const droga = document.querySelector('input[name="droga"]:checked').value;
+		const trabalho = document.querySelector('input[name="trabalho"]:checked').value;
+		const periodo = document.querySelector('input[name="periodo"]:checked').value;
+		const sono = document.querySelector('input[name="sono"]:checked').value;
+		const mental = document.querySelector('input[name="mental"]:checked').value;
+		const longos = document.querySelector('input[name="longos"]:checked').value;
 		//const exames = document.querySelector('input[name=exames]').checked;
-		const sente = document.querySelector('input[name="sente"]:checked');
+		const sente = document.querySelector('input[name="sente"]:checked').value;
 		const data = document.getElementById("data").value;
 
 		 
@@ -638,7 +638,7 @@ function verificarFormulario() {
 			  fetch('https://sheetdb.io/api/v1/2lu35faac1yai',{
 		method: 'post',
 		headers: {
-			'Accept': 'application/json',
+			//'Accept': 'application/json',
 			'Content-Type': 'application/json',
 			},
 				  //Body para api spreadsheet
