@@ -632,21 +632,7 @@ function verificarFormulario() {
 		const sente = document.querySelector('input[name=sente]').checked;
 		const data = document.getElementById("data").value;
 
-		const dados = {
-			
-			"nome":nome,
-			"ingerir":ingerir,
-			"droga":droga,
-			"trabalho":trabalho,
-			"periodo":periodo,
-			"sono":sono,
-			"mental":mental,
-			"longos":longos,
-			"sente":sente,
-			"data":data
-	
-		};
-
+		 
 		//fetch('https://api.apispreadsheets.com/data/YtLYDc7T192SU6s7/', { cave antiga que espirou 250 após espirar a proxima retornar a esta
 		//fetch('https://api.apispreadsheets.com/data/1PPAdAnCw6UiCQRb/', não deu certo
 			  fetch('https://sheetdb.io/api/v1/2lu35faac1yai',{
@@ -657,7 +643,20 @@ function verificarFormulario() {
 			},
 				  //Body para api spreadsheet
 			//body: JSON.stringify({ nome, ingerir, droga, trabalho, periodo, sono, mental, longos, /*exames, */sente, data}),
-				  body: JSON.stringify(dados),
+				  body: JSON.stringify({
+		dados: {	
+			nome:nome,
+			ingerir:ingerir,
+			droga:droga,
+			trabalho:trabalho,
+			periodo:periodo,
+			sono:sono,
+			mental:mental,
+			longos:longos,
+			sente:sente,
+			data:data
+		}
+				  }),
 	}).then(() => verificarFormulario())
 		
 
