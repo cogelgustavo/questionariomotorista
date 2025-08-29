@@ -601,16 +601,18 @@ function verificarFormulario() {
 	const bemsim = document.getElementById("bemsim").checked;
 		
 		if (naoingeriu && droganao && horasnao && fadiganao && sononao && atvnao && pernao || persim && /*obrnao &&*/ bemsim){
-			const funcionario = document.getElementById("nomemotorista").value;				
+			const funcionario = document.getElementById("nomemotorista").value;			
+			const dataform = document.getElementById("data").value
 			document.getElementById('form').style.display = "none"
 			document.getElementById('cardlibdiv').style.display = "block"
-			document.getElementById('nome').innerHTML = funcionario
+			document.getElementById('nome').innerHTML = funcionario+dataform
 			
 		}else{
 			const funcionario = document.getElementById("nomemotorista").value;
+			const dataform = document.getElementById("data").value
 			document.getElementById('form').style.display = "none"
 			document.getElementById('cardnegdiv').style.display = "block"
-			document.getElementById('nome').innerHTML = funcionario
+			document.getElementById('nome').innerHTML = funcionario+dataform
 			}	
 
 }
