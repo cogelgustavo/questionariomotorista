@@ -606,6 +606,7 @@ function verificarFormulario() {
 			document.getElementById('form').style.display = "none"
 			document.getElementById('cardlibdiv').style.display = "block"
 		document.getElementById('nome').innerHTML = funcionario + "-DAta-" + dataform
+			window.print()
 			
 		}else{
 			const funcionario = document.getElementById("nomemotorista").value;
@@ -613,6 +614,7 @@ function verificarFormulario() {
 			document.getElementById('form').style.display = "none"
 			document.getElementById('cardnegdiv').style.display = "block"
 			document.getElementById('nome').innerHTML = funcionario + "-DAta-" + dataform
+			window.print()
 			}	
 
 }
