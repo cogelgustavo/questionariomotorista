@@ -605,14 +605,14 @@ function verificarFormulario() {
 			const dataform = document.getElementById("data").value
 			document.getElementById('form').style.display = "none"
 			document.getElementById('cardlibdiv').style.display = "block"
-			document.getElementById('nome').innerHTML = funcionario +"-DAta-"+ dataform
+		document.getElementById('nome').innerHTML = funcionario + "-DAta-" + dataform
 			
 		}else{
 			const funcionario = document.getElementById("nomemotorista").value;
 			const dataform = document.getElementById("data").value
 			document.getElementById('form').style.display = "none"
 			document.getElementById('cardnegdiv').style.display = "block"
-			document.getElementById('nome').innerHTML = funcionario+dataform
+			document.getElementById('nome').innerHTML = funcionario + "-DAta-" + dataform
 			}	
 
 }
