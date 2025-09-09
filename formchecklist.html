@@ -614,7 +614,7 @@ function verificarFormulario() {
 	//const obrnao = document.getElementById("obrnao").checked;
 	const bemsim = document.getElementById("bemsim").checked;
 		
-		if (naoingeriu && droganao && horasnao && fadiganao && sononao && atvnao && pernao || persim && /*obrnao &&*/ bemsim){
+		if (naoingeriu && droganao && horasnao && fadiganao && sononao && atvnao && (pernao || persim) && /*obrnao &&*/ bemsim){
 			const funcionario = document.getElementById("nomemotorista").value;			
 			const dataform = document.getElementById("data").value
 			document.getElementById('form').style.display = "none"
